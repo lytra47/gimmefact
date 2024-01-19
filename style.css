@@ -11,6 +11,10 @@ body {
   padding: 48px 64px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /*MAIN LAYOUTS */
 .container {
   max-width: 1500px;
@@ -147,7 +151,10 @@ ul {
 }
 
 .btn:hover {
-  transform: scale(110%) rotate(-2deg);
+  transform: scale(102%);
+  background-color: #a8a29e !important;
+  color: #292524;
+  background-image: none;
 }
 
 .btn-large {
@@ -213,6 +220,10 @@ ul {
   .fact-form input,
   .fact-form select {
     width: auto;
+  }
+
+  .fact-form span {
+    align-self: flex-end;
   }
 }
 

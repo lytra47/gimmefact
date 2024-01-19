@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GimmeFact</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,6 +10,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+
+    <title>GimmeFact</title>
   </head>
   <body>
     <div class="container">
@@ -22,12 +23,12 @@
           <h1>Gimme fact</h1>
         </div>
         <!-- LOGO - END -->
-        <button class="btn btn-large">Share a fact</button>
+        <button class="btn btn-large btn-open">Share a fact</button>
       </header>
       <!-- HEADER - END  -->
 
       <!-- FORM -->
-      <form class="fact-form">
+      <form class="fact-form hidden">
         <input type="text" placeholder="Share a fact to the community." />
         <span>200</span>
         <input type="text" placeholder="Share the source." />
@@ -71,7 +72,7 @@
 
         <!-- Fact list  -->
         <section>
-          <ul>
+          <ul class="facts-list">
             <li class="fact">
               <p>
                 React is being developed by Meta (formerly facebook)
@@ -119,4 +120,5 @@
       <!-- MAIN - END -->
     </div>
   </body>
+  <script src="./script.js"></script>
 </html>
