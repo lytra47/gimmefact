@@ -16,7 +16,7 @@ body {
 }
 
 /*MAIN LAYOUTS */
-.container {
+#root {
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -151,10 +151,7 @@ ul {
 }
 
 .btn:hover {
-  transform: scale(102%);
-  background-color: #a8a29e !important;
-  color: #292524;
-  background-image: none;
+  transform: scale(107%);
 }
 
 .btn-large {

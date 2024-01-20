@@ -1,4 +1,12 @@
-const CATEGORIES = [
+import React from "react";
+import "./style.css";
+import Header from "./components/Header";
+import Category from "./components/Category";
+import FactContainer from "./components/FactContainer";
+import ShareFactForm from "./components/ShareFactForm";
+import { useState } from "react";
+
+const categories = [
   { name: "technology", color: "#3b82f6" },
   { name: "science", color: "#16a34a" },
   { name: "finance", color: "#ef4444" },
@@ -42,3 +50,27 @@ const initialFacts = [
     createdIn: 2015,
   },
 ];
+
+function App() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  // TEMP
+  const [facts, setFacts] = useState(initialFacts);
+  return (
+    <>
+      <Header onIsFormOpen={isFormOpen} onSetIsFormOpen={setIsFormOpen} />
+      {isFormOpen && (
+        <ShareFactForm
+          onSetFacts={setFacts}
+          onSetIsFormOpen={setIsFormOpen}
+          categories={categories}
+        />
+      )}
+      <main className="main">
+        <Category categories={categories} />
+        <FactContainer facts={facts} categories={categories} />
+      </main>
+    </>
+  );
+}
+
+export default App;
