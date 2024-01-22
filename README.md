@@ -1,6 +1,3 @@
-# Build hosted
-try - https://gimme-fact.netlify.app/
-
 
 # Getting Started with Create React App
 
