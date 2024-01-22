@@ -14,11 +14,25 @@ body {
 .hidden {
   display: none !important;
 }
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+.disputed {
+  color: #ef4444;
+  font-weight: 600;
+  margiin-right: 10px;
+}
 
 /*MAIN LAYOUTS */
 #root {
   max-width: 1500px;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .header {
@@ -115,6 +129,9 @@ h1 {
 }
 .vote-buttons button:hover {
   background-color: #292524;
+}
+.vote-buttons button:disabled {
+  background-color: #44403c;
 }
 
 ul {
@@ -232,6 +249,7 @@ ul {
     flex-direction: column;
     gap: 48px;
     align-items: stretch;
+    padding: 0 !important;
   }
   header button {
     width: 100%;
